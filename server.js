@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 app.get("api/latest", (req, res) => {
 
     const data = JSON.parse(
-        fs.readFileSync("versions.json")
+        fs.readFileSync("version.json")
     );
 
     res.json(data.latest);
