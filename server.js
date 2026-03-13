@@ -3,6 +3,10 @@ const fs = require("fs");
 
 const app = express();
 
+app.get("/", (req, res) => {
+    res.send("OTA API Server running!!");
+});
+
 app.get("api/latest", (req, res) => {
 
     const data = JSON.parse(
