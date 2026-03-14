@@ -16,7 +16,7 @@ app.get("/api/latest", (req, res) => {
     //);
 
     res.json({
-        latest_version: 3,
+        latest_version: 4,
         apk_url: "https://panel-ota-api.onrender.com/apk/panel_app_v1.0.0.apk"
     });
 
