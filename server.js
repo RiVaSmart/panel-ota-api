@@ -1,5 +1,5 @@
 const express = require("express");
-const fs = require("fs");
+//const fs = require("fs");
 
 const app = express();
 
@@ -11,11 +11,14 @@ app.use("/apk", express.static("apk"));
 
 app.get("/api/latest", (req, res) => {
 
-    const data = JSON.parse(
-        fs.readFileSync("version.json")
-    );
+    //const data = JSON.parse(
+    //    fs.readFileSync("version.json")
+    //);
 
-    res.json(data.latest);
+    res.json({
+        latest_version: 3,
+        apk_url: "https://panel-ota-api.onrender.com/apk/panel_app_v1.0.0.apk"
+    });
 
 });
 
